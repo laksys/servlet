@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap");
+
+body {
+    margin: 0 auto;
+    width: 80%;
+    background: gold;
+    font-family: "Slabo 27px", serif;
+}
+
+fieldset {
+    width: 350px;
+    text-align: right;
+}
+
+label {
+    display: block;
+    padding-top: 8px;
+}
