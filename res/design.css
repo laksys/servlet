@@ -16,3 +16,8 @@ label {
     display: block;
     padding-top: 8px;
 }
+
+.red {
+    		color: red;
+    		font-weight: bold;
+}
