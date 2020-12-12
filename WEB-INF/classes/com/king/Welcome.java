@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class Welcome extends HttpServlet {
-		@Override
+	@Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
         res.setContentType("text/plain");
         PrintWriter out = res.getWriter();

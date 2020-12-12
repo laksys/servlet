@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context>
+
+	<!-- Datasource creation -->
+    <Resource 
+        name="jdbc/db"
+        auth="Container"
+        type="javax.sql.DataSource"
+        driverClassName="org.postgresql.Driver"
+        url="jdbc:postgresql://172.17.0.2:5432/postgres"
+        username="postgres"
+        password="abcd1234"
+        maxTotal="8"
+        maxIdle="4"/>
+
+	<!-- Datasource realm creation using above datasource -->
+    <Realm 
+        className="org.apache.catalina.realm.DataSourceRealm"
+        localDataSource="true"
+        dataSourceName="jdbc/db"
+        userTable="emp"
+        userNameCol="ename"
+        userCredCol="passwd"
+        userRoleTable="emp"
+        roleNameCol="role">
+        <CredentialHandler
+            className="org.apache.catalina.realm.MessageDigestCredentialHandler"
+            algorithm="md5"/>
+    </Realm>     
+
+    <!-- Jdbc realm creation without datasource -->
+	<!--   
+    <Realm
+        className="org.apache.catalina.realm.JDBCRealm"
+        driverName="org.sqlite.JDBC"
+        connectionURL="jdbc:sqlite:/home/pi/db/mydb"
+        userTable="emp"
+        userNameCol="empid"
+        userCredCol="passwd"
+        userRoleTable="emp"
+        roleNameCol="role">
+
+        <CredentialHandler
+            className="org.apache.catalina.realm.MessageDigestCredentialHandler" 
+            algorithm="md5"/>
+    </Realm>
+    -->
+
+</Context>
+

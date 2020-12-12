@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="#">
-    <title>Document</title>
+    <title>Login</title>
     
     <style>
     	@import "res/design.css";    	
@@ -13,20 +13,15 @@
 </head>
 <body>
 
-    <h2>Student Registration</h2>
+    <h2>Authentication</h2>
     <fieldset>
-        <legend>Form</legend>
-        <form method="POST" action="ws">
-            <label>Name <input name="sname"/></label>
-            <label>Rollno <input name="rollno"/></label>
-            <label>Mark <input name="mark"/></label>
+        <legend>Login</legend>
+        <form method="POST" action="j_security_check">
+            <label>User name <input type="text" name="j_username"/></label>
+            <label>Password <input type="password" name="j_password"/></label>
             <label><input type="submit"/></label>
         </form>
     </fieldset>
-    
-    <p/>
-    
-    <script src="res/app.js"></script>
-    
+        
 </body>
 </html>
